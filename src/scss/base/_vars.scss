@@ -1,0 +1,22 @@
+:root {
+  --container-width: 1220px;
+  --container-padding: 15px;
+
+  --font-main: NAMU, sans-serif;
+  --font-accent: Inter, sans-serif;
+
+  --page-bg: #121212;
+  --text-color: #f8f8f9;
+  --accent: #1d56eb;
+
+  --laptop-size: 1199px;
+  --tablet-size: 959px;
+  --mobile-size: 599px;
+
+  --index: calc(1vw + 1vh);
+}
+
+.dark {
+  --page-bg: #252526;
+  --text-color: #fff;
+}

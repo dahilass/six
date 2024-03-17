@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Стартовый шаблон</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@19.2.19/build/js/intlTelInput.min.js" defer></script>
+    <script src="./js/index.bundle.js" defer></script>
+  </head>
+
+  <body>
+
+    @@include('blocks/header.html')
+    
+    @@include('blocks/product-owner.html') 
+    @@include('blocks/why.html') 
+    @@include('blocks/roadmap.html') 
+    @@include('blocks/payment.html')
+    @@include('blocks/garanties.html')
+    @@include('blocks/contact.html')
+    @@include('blocks/brief.html')
+
+    @@include('blocks/footer.html')
+
+  </body>
+
+</html>

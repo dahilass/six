@@ -1,0 +1,62 @@
+html {
+  scroll-behavior: smooth;
+  font-size: 20px;
+}
+body {
+  background-color: var(--page-bg);
+  color: var(--text-color);
+  font-family: var(--font-main);
+  overflow-x: hidden;
+  counter-reset: why 0 me 0;
+  letter-spacing: 0.04em;
+}
+.wrapper {
+  overflow: hidden;
+}
+span {
+  color: var(--accent);
+}
+.logo {
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+.button {
+  max-height: 2.8rem;
+  max-width: 15.5rem;
+  white-space: nowrap;
+  text-transform: uppercase;
+  padding: 0.8rem 1.6rem;
+  font-size: clamp(0.8rem, var(--index) * 1.4, 1.2rem);
+  line-height: 97%;
+  background: var(--accent);
+  border-radius: 1.5rem;
+  box-shadow: 0 0 100px #1d56eb80;
+  transition: all 0.3s linear;
+  &:hover {
+    box-shadow: 0 0 25px #1d56eb80, inset 0 0 2px black;
+  }
+}
+.section__title {
+  font-size: clamp(0.8rem, var(--index) * 2, 2rem);
+  letter-spacing: 0.04rem;
+  line-height: calc(2rem + 1px);
+}
+.section__suptitle {
+  font-size: clamp(18px, var(--index), 1.2rem);
+}
+h4 {
+  font-family: Inter, sans-serif;
+  font-size: clamp(18px, var(--index), 1.2rem);
+  letter-spacing: 0.04em;
+  line-height: calc(1.2rem + 1px);
+}
+h4 + p {
+  font-family: Inter, sans-serif;
+  font-size: clamp(16px, var(--index), 1rem);
+  letter-spacing: 0.04em;
+  line-height: calc(1.2rem + 1px);
+  color: #f8f8f9bf;
+}
