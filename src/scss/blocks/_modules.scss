@@ -1,0 +1,32 @@
+.modules {
+    padding: 10rem 0 4.5rem;
+    &__title {
+        max-width: 35rem;
+        margin-bottom: 2.8rem;
+    }
+    padding: 10rem 0 8.5rem;
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        flex-wrap: wrap;
+        li {
+            height: 200px;
+            position: relative;
+            max-width: 15rem;
+            padding: 0.6rem;
+            border-bottom: 4px solid var(--accent);
+            display: flex;
+            align-items: center;
+            font-family: var(--font-accent);
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
+        img,
+        .shadow {
+            position: absolute;
+            right: 0;
+        }
+    }
+}

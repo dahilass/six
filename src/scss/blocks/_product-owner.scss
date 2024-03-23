@@ -1,5 +1,7 @@
 .product-owner {
+  position: relative;
   padding: 75px 0 110px;
+  
   &__title {
     margin-bottom: 0.6rem;
     color: var(--accent);

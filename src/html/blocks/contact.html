@@ -1,21 +1,34 @@
 <section class="contact">
-  <div class="container">
-    <div class="contact__inner">
-      <form class="contact__form" action="">
-        <input type="text" placeholder="Имя">
-        <input type="phone" id="phone" name="phone">
-        <input type="email" placeholder="Email">
-        <textarea name="text" id="text" cols="30" rows="10" maxlength="280" placeholder="Текст сообщения"></textarea>
-        <button class="contact__button button">Оставить заявку</button>
-      </form>
-      <div class="contact__content">
-        <h2><span>Не планируешь</span> переезд в Москву или Петербург?</h2>
-        <p>
-          Заполни форму и мы обсудим с тобой варианты взаимодействия
-          индивидуально
-        </p>
-        <img src="img/contact-bg.svg" alt="bg-img">
-      </div>
+    <div class="container">
+        <div class="contact__inner">
+            <form class="form">
+                <div class="form-inner">
+                    <input type="text" placeholder="Имя" required />
+                    <input type="phone" id="phoneFirst" name="phone" required />
+                    <input type="email" placeholder="Email" required />
+                    <textarea
+                        name="text"
+                        id="text"
+                        cols="30"
+                        rows="10"
+                        maxlength="280"
+                        placeholder="Текст сообщения"
+                    ></textarea>
+                </div>
+                <button type="submit" class="contact__button button">
+                    Оставить заявку
+                </button>
+            </form>
+            <div class="contact__content">
+                <h2>
+                    <span>Не планируешь</span> переезд в Москву или Петербург?
+                </h2>
+                <p>
+                    Заполни форму и мы обсудим с тобой варианты взаимодействия
+                    индивидуально
+                </p>
+                <img src="img/contact-bg.svg" alt="bg-img" />
+            </div>
+        </div>
     </div>
-  </div>
 </section>
