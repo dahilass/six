@@ -1,0 +1,57 @@
+.garanties {
+    position: relative;
+    padding: 140px 0 100px;
+    &::before {
+        @include divider;
+        content: '';
+        top: -2px;
+        box-shadow: 0 -50px 100px var(--accent);
+        z-index: 2;
+    }
+    &__title {
+        margin-bottom: 16px;
+        max-width: 50rem;
+    }
+    &__header {
+        margin-bottom: 5rem;
+    }
+    &__list {
+        display: grid;
+        margin-top: 100px;
+        gap: 2rem;
+        padding: 2rem 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        @media (max-width: 1000px) {
+            background-color: #121212;
+            background-blend-mode: luminosity;
+            li {
+                padding: 8px 4px;
+                width: 100%;
+                background-color: #232323;
+            }
+        }
+        li {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        li:nth-child(even) {
+            justify-self: end;
+            flex-direction: row;
+        }
+
+        img {
+            width: min(var(--index) * 6, 100px);
+            height: min(var(--index) * 6, 100px);
+        }
+    }
+    &__description {
+        display: flex;
+        flex-direction: column;
+        border-radius: 30px;
+        gap: 0.5rem;
+        max-width: 20rem;
+    }
+}

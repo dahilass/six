@@ -1,0 +1,98 @@
+.experience {
+    position: relative;
+    padding: 6.5rem 0 5.5rem;
+    &__title {
+        display: flex;
+        flex-wrap: nowrap;
+        font-size: clamp(2rem, var(--index) * 4.5, 4.8rem);
+        margin-bottom: 7.5rem;
+        span {
+            white-space: nowrap;
+            margin-right: -6.1rem;
+            margin-top: -1.8rem;
+            font-size: clamp(3rem, var(--index) * 6, 6.4rem);
+        }
+        @media (max-width: 600px) {
+            display: block;
+            margin-bottom: 1rem;
+            span {
+                padding-bottom: 1rem;
+                margin: 0;
+                white-space: wrap;
+            }
+        }
+    }
+    &__graph {
+        position: relative;
+        & > img {
+            position: absolute;
+        }
+    }
+    &__list {
+    }
+    &__swiper {
+        font-family: var(--font-accent);
+        overflow: visible !important;
+        .swiper-wrapper {
+            padding: 0 0 0 30px;
+            width: 100% !important;
+            display: flex;
+            overflow: visible !important;
+        }
+        &_bot {
+            .swiper-wrapper {
+                align-items: start;
+            }
+            .swiper-slide {
+                display: flex;
+                padding: 32px 0 32px 28px;
+                align-items: start;
+                margin-right: -6px;
+                &:last-child {
+                    margin-right: 0;
+                    padding-left: 36px;
+                }
+            }
+        }
+        &_bot .swiper-slide:nth-child(odd) {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                top: -0.5rem;
+                z-index: 10;
+                width: 24px;
+                height: 105px;
+                background: url('/img/experience/beam.png') no-repeat;
+            }
+        }
+        &_top {
+            .swiper-wrapper {
+                align-items: end;
+            }
+            .swiper-slide {
+                display: flex;
+                padding: 32px 0 32px 28px;
+                align-items: end;
+            }
+        }
+        &_top .swiper-slide:nth-child(even) {
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: -0.8rem;
+                z-index: 10;
+                width: 24px;
+                height: 105px;
+                background: url('/img/experience/beam.png') no-repeat;
+                rotate: 180deg;
+            }
+        }
+    }
+    .swiper-slide:has(img) {
+        padding: 0;
+    }
+}

@@ -1,0 +1,79 @@
+//for more styles look in _contact.scss
+
+.partaking {
+    position: relative;
+    padding-block: 7.9rem 10rem;
+    &::before {
+        @include divider;
+        content: '';
+        top: -2px;
+        box-shadow: 0 50px 100px var(--accent);
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: auto;
+        width: 100%;
+        max-width: 760px;
+        text-align: center;
+    }
+    &__title {
+        margin-bottom: 2.4rem;
+    }
+    &__info {
+        max-width: 550px;
+        margin-bottom: 1.2rem;
+        color: var(--text-color-lite);
+    }
+    &__form {
+        max-width: none;
+    }
+    &__form-inner {
+        margin-inline: auto;
+        margin-bottom: 1.4rem;
+    }
+}
+
+.checkbox {
+    user-select: none;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    white-space: nowrap;
+    font-size: 1.2rem;
+    color: var(--text-color-lite);
+    @media (max-width: 1000px) {
+        white-space: normal;
+    }
+}
+input[type='checkbox'] {
+    cursor: pointer;
+    opacity: 0;
+    width: 32px;
+    height: 32px;
+    background: var(--accent);
+    &:checked + .custom-checkbox svg {
+        opacity: 1;
+    }
+    &:not(:checked) + .custom-checkbox svg {
+        opacity: 0;
+    }
+}
+.custom-checkbox {
+    pointer-events: none;
+    position: absolute;
+    background: var(--accent);
+    border-radius: 8px;
+    width: 32px;
+    height: 32px;
+    svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+//for more styles look in _contact.scss

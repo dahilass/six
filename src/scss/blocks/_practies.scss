@@ -1,0 +1,68 @@
+.practice {
+    padding: 4.5rem 0 7rem;
+    &__title {
+        margin-bottom: 1.5rem;
+    }
+    &__inner {
+        margin: 0 4.5rem 3.5rem 0;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem 0;
+        @media (max-width: 800px) {
+            margin: 0 0 3rem 0;
+        }
+    }
+    &__content {
+        position: relative;
+        &_right {
+            text-align: right;
+            p:not(:has(> span)) {
+                margin-right: -3rem;
+                @media (max-width: 800px) {
+                    margin-right: 0;
+                }
+            }
+            &::before {
+                z-index: 1;
+                position: absolute;
+                top: 55%;
+                left: -40px;
+                content: '';
+                width: clamp(4px, var(--index), 10px);
+                background-color: var(--accent);
+                height: 100%;
+                box-shadow: 0 0 100px var(--accent);
+                rotate: -15deg;
+                transform: translateY(-50%);
+                @media (max-width: 1000px) {
+                    display: none;
+                }
+            }
+        }
+        &_left {
+            p:not(:has(> span)) {
+                margin-left: 4.8rem;
+            }
+        }
+        p {
+            font-size: clamp(2rem, var(--index) * 4.5, 120px);
+            &:has(> span) {
+                margin-bottom: -5.3rem;
+                font-size: clamp(4rem, var(--index) * 11.5, 280px);
+            }
+        }
+    }
+    &__tip {
+        font-family: var(--font-accent);
+        width: 100%;
+        max-width: 520px;
+        margin: 0 auto;
+        font-size: 32px;
+        display: flex;
+        justify-content: center;
+        border: 4px solid var(--accent);
+        padding: 16px 32px;
+        border-radius: 30px;
+    }
+}

@@ -1,0 +1,81 @@
+.community {
+    position: relative;
+    display: flex;
+    padding: 4.5rem 0;
+    background: var(--accent);
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 2.8rem;
+    }
+    &__inner {
+        overflow: hidden;
+        z-index: 1;
+        display: flex;
+    }
+    &__content {
+        z-index: 10;
+        p {
+            max-width: 30rem;
+            line-height: 1.5rem;
+            font-size: 1.2rem;
+            font-family: var(--font-accent);
+        }
+    }
+    &__img-box {
+        padding-left: 10rem;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+    }
+    &__photo {
+        z-index: 1;
+        position: relative;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        border-radius: 400px 0 0;
+    }
+    &__decor {
+        z-index: 0;
+        top: 0;
+        right: 0;
+        position: absolute;
+        &_first {
+            right: 3.1rem;
+            top: -6rem;
+            rotate: -11deg;
+            animation: spinToRight 80s linear infinite alternate-reverse;
+        }
+        &_second {
+            right: 0rem;
+            top: -4.5rem;
+            rotate: 20deg;
+            animation: spinToLeft 80s linear infinite alternate-reverse;
+        }
+        &_third {
+            right: -3rem;
+            top: -3rem;
+            animation: spinToRight 80s linear infinite alternate-reverse;
+        }
+    }
+}
+
+@keyframes spinToRight {
+    0% {
+        rotate: 0;
+    }
+    100% {
+        rotate: 60deg;
+    }
+}
+
+@keyframes spinToLeft {
+    0% {
+        rotate: 0;
+    }
+    100% {
+        rotate: -60deg;
+    }
+}

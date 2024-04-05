@@ -1,0 +1,176 @@
+.testimonials {
+    position: relative;
+    padding-block: 7rem;
+    .container {
+        max-width: 100%;
+    }
+    &::before {
+        @include divider;
+        content: '';
+        top: -2px;
+        box-shadow: 0 0 200px var(--accent);
+        z-index: 2;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 2.8rem;
+    }
+    &__inner {
+    }
+    .swiper {
+        overflow: visible;
+    }
+    &__swiper {
+        position: relative;
+        overflow: visible;
+        .swiper-wrapper {
+        }
+        .swiper-button {
+            position: absolute;
+          
+            path {
+                fill: var(--accent);
+            }
+            &-next {
+                display: block;
+                rotate: 180deg;
+                right: 15%;
+            }
+            &-prev {
+                left: 15%;
+                display: block;
+            }
+
+            &::before,
+            &::after {
+                display: none;
+            }
+        }
+        .swiper-pagination {
+            --swiper-pagination-bullet-horizontal-gap: 0;
+            transform: translateY(200%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.2rem;
+            &-bullet {
+                padding: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: var(--page-bg);
+                border: 2px solid var(--accent);
+                opacity: 0.7;
+                min-width: 20px;
+                min-height: 20px;
+
+                &-active {
+                    min-width: 32px;
+                    min-height: 32px;
+                    color: var(--text-color);
+                    opacity: 1;
+                    background: var(--accent);
+                }
+
+                &::after {
+                    content: counter(testimonials);
+                    counter-increment: testimonials;
+                    display: inline;
+                    font-size: 12px;
+                    font-family: var(--font-accent);
+                }
+            }
+        }
+        .swiper-slide {
+            position: relative;
+            border-radius: 30px;
+            opacity: 0;
+            transition-property: all;
+            max-width: 835px;
+            &-active {
+                box-shadow: 0 0 150px var(--accent);
+                opacity: 1;
+            }
+            &::after {
+            }
+
+            :is(&-next, &-prev) {
+                opacity: 0.7;
+            }
+            .testimonials__quote {
+                z-index: 100;
+                position: absolute;
+                width: 100%;
+                max-width: 44px;
+                max-height: 34px;
+            }
+            .testimonials__quote_blue {
+                top: -1rem;
+                left: 2rem;
+            }
+            .testimonials__quote_white {
+                bottom: -1rem;
+                right: 2rem;
+            }
+            .testimonials__figure {
+                z-index: -1;
+                position: absolute;
+                right: 0;
+            }
+            p {
+                color: rgba(19, 20, 22, 0.7);
+            }
+            p:has(span) {
+                height: auto;
+                font-size: 1.2rem;
+            }
+            p:not(:has(span)) {
+                overflow: hidden;
+                margin-block: 20px;
+                max-width: 27.6rem;
+                text-overflow: ellipsis;
+                display: -moz-box;
+                -moz-box-orient: vertical;
+                display: -webkit-box;
+                -webkit-line-clamp: 6;
+                -webkit-box-orient: vertical;
+                line-clamp: 6;
+                box-orient: vertical;
+                line-height: 1.23rem;
+                letter-spacing: 0.035em;
+                text-align: left;
+            }
+        }
+    }
+    &__slide-inner {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        z-index: 1;
+        justify-content: space-between;
+        padding: 48px 32px;
+        border-radius: 30px;
+        background: var(--text-color);
+        font-family: var(--font-accent);
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            right: -17%;
+            top: -20%;
+            width: 300px;
+            height: 500px;
+            background-color: var(--accent);
+            z-index: 0;
+            rotate: 25deg;
+        }
+    }
+    &__slide-content {
+        position: relative;
+        img {
+            max-width: 206px;
+            max-height: 206px;
+            border-radius: 50%;
+        }
+    }
+}

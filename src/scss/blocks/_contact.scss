@@ -1,0 +1,118 @@
+.contact {
+    position: relative;
+    padding-bottom: 180px;
+}
+.contact__inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    @media (max-width: 800px) {
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+    }
+}
+.contact__content {
+    max-width: 28rem;
+    margin-inline: auto;
+    width: 100%;
+    h2 {
+        max-width: 25rem;
+        font-size: clamp(1rem, var(--index) * 1.5, 1.6rem);
+        margin-bottom: 1.6rem;
+    }
+    p {
+        max-width: 28rem;
+        font-size: clamp(1rem, var(--index) * 1.2, 1.2rem);
+        line-height: 1.5rem;
+    }
+    img {
+        width: 100%;
+        max-width: 25rem;
+        margin-top: 2.2rem;
+    }
+}
+.form {
+    margin-inline: auto;
+    max-width: 25rem;
+    width: 100%;
+    .iti {
+        width: 100%;
+        display: flex;
+        gap: 0.6rem;
+    }
+    .iti__flag-container {
+        position: static;
+    }
+    input,
+    textarea,
+    .iti__flag-container {
+        border-radius: 30px;
+        padding: 12px 10px 12px 16px;
+        background-color: #fff;
+        color: var(--accent);
+        &::placeholder {
+            color: #13141670;
+        }
+    }
+    textarea {
+        max-height: 10rem;
+    }
+    input,
+    textarea {
+        position: relative;
+        width: 100%;
+        transition: all 0.3s linear;
+    }
+    input:not([type='checkbox']):focus,
+    textarea:focus {
+        scale: 1.01;
+        box-shadow: 0 0 100px #1d56eb4d;
+    }
+    .form-inner:has(input:not([type='checkbox']):focus, textarea:focus) {
+        box-shadow: 0 0 50px #1d56eb4d;
+    }
+    .iti__tel-input {
+        padding-left: 16px !important;
+    }
+    .iti__selected-flag {
+        padding: 0;
+    }
+    .iti__flag-container {
+    }
+    .iti__selected-flag {
+        display: flex;
+        align-items: center;
+    }
+    .iti__flag {
+        will-change: transform;
+        transform: scale(1.5);
+    }
+    .iti__arrow {
+        margin-left: 0.6rem;
+        width: 17px;
+        border-top: 8px solid var(--accent);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        &--up {
+            border-top: none;
+            border-bottom: 8px solid var(--accent);
+        }
+    }
+}
+.form-inner {
+    width: 100%;
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    box-shadow: 0 0 150px #1d56eb4d;
+    background: hsla(223, 84%, 52%, 0.15);
+    border-radius: 8px;
+    transition: box-shadow 0.3s linear;
+}
+.contact__button {
+    margin: 1.5rem auto 0;
+    @media (max-width:800px) {
+        display: block;
+    }
+}

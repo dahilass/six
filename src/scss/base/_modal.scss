@@ -1,0 +1,37 @@
+// dialog {
+//     overflow: hidden;
+//     // position: relative;
+//     opacity: 0;
+//     margin: auto;
+//     background: transparent;
+//     transition-duration: 1s;
+//     transition-behavior: allow-discrete;
+//     &:has([open]) body {
+//         overflow: hidden;
+//     }
+//     &::backdrop {
+//         background: hsla(0, 0%, 0%, 0.9);
+//     }
+// }
+// :modal {
+//     opacity: 1;
+//     color: white;
+// }
+// body {
+// }
+
+.modal {
+    z-index: 1000;
+    position: fixed;
+    display: flex;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    // transition-duration: 1s;
+    &__inner {
+        padding: 1rem;
+        margin: auto;
+    }
+}

@@ -1,0 +1,86 @@
+.brief {
+    position: relative;
+    &::before {
+        @include divider;
+        content: '';
+        top: -2px;
+        box-shadow: 0 0 200px var(--accent);
+    }
+    &__inner {
+        position: relative;
+        width: 100%;
+        display: flex;
+        gap: 0.5rem;
+        overflow: hidden;
+        // &::after {
+        //   content: "";
+        //   position: absolute;
+        //   display: block;
+        //   width: 100%;
+        //   height: 4px;
+        //   background-color: var(--accent);
+        //   box-shadow: 0 0 200px var(--accent);
+        //   bottom: -2px;
+        // }
+        &:last-child {
+            div {
+                padding: 0 0 20rem;
+                max-width: 30rem;
+                margin: 4.4rem 0 0 auto;
+            }
+        }
+        p:not([class]) {
+            width: 100%;
+            max-width: 31rem;
+            line-height: 1.2rem;
+            color: #f8f8f9bf;
+        }
+        div {
+            padding-top: 8.5rem;
+            width: 100%;
+            margin-bottom: 4.4rem;
+        }
+    }
+    &__suptitle {
+        margin-bottom: 0.8rem;
+        max-width: 22rem;
+    }
+    &__title {
+        margin-bottom: 3rem;
+    }
+    &__img {
+        width: 100%;
+        pointer-events: none;
+        position: absolute;
+        max-width: 26.5rem;
+        &_right {
+            bottom: -5rem;
+            right: 0;
+        }
+        &_left {
+            left: 2rem;
+            top: -3.5rem;
+        }
+        @media (max-width: 1300px) {
+            opacity: 0.2;
+        }
+    }
+    &__button {
+        position: absolute;
+        left: 50%;
+        bottom: 50%;
+        transform: translate(-50%, 3rem);
+    }
+    .divider {
+        position: relative;
+        width: 100%;
+        height: 4px;
+        &::before {
+            @include divider;
+            content: '';
+            top: 0;
+            box-shadow: 0 0 200px var(--accent);
+            z-index: 2;
+        }
+    }
+}

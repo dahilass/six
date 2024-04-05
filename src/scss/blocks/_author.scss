@@ -1,0 +1,87 @@
+.author {
+    position: relative;
+    padding: 7rem 0 6.5rem;
+    &::before {
+        @include divider;
+        content: '';
+        top: -2px;
+        box-shadow: 0 -50px 100px var(--accent);
+    }
+    &__inner {
+        padding-right: 0.5rem;
+        display: grid;
+        grid-template: 1fr / 1fr 1fr;
+        align-items: center;
+        gap: 0 1rem;
+        @media (max-width: 1000px) {
+            grid-template: 1fr 1fr / 1fr;
+        }
+    }
+    &__title {
+        margin-bottom: 2.8rem;
+    }
+    &__text-content {
+        max-width: 30rem;
+        p {
+            font-family: var(--font-accent);
+            margin-bottom: 1.2rem;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            span {
+                color: rgba(248, 248, 249, 0.75);
+            }
+        }
+    }
+    &__socials {
+        margin-left: -10px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        li {
+        }
+        a {
+            padding: 10px;
+        }
+        a:hover {
+            path {
+                opacity: 1;
+            }
+        }
+        path {
+            fill: #f8f8f9;
+            opacity: 0.75;
+            transition: all 0.3s linear;
+        }
+    }
+    &__img-content {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        img {
+            max-width: 500px;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0 0 100px var(--accent);
+        }
+        p {
+            text-align: right;
+            line-height: 4.7rem;
+            margin-bottom: 1.2rem;
+            &:not(:has(span)) {
+                font-size: clamp(2rem, var(--index) * 4, 4.8rem);
+            }
+            span {
+                color: rgba(248, 248, 249, 0.75);
+            }
+        }
+        p:has(> span) {
+            font-family: var(--font-accent);
+            font-size: 1rem;
+            line-height: 1.5rem;
+        }
+    }
+    &__text-block {
+        margin-top: -8rem;
+    }
+}
